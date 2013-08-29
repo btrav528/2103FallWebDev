@@ -13,7 +13,7 @@
     <![endif]-->
   </head>
   <body>
-    <h1>This is the final</h1>
+    <h1>This is the Playground</h1>
 
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
