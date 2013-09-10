@@ -8,7 +8,7 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Brand</a>
+			<a class="navbar-brand" href="#">Playground</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->

@@ -13,14 +13,38 @@
 		<![endif]-->
 	</head>
 	<body>
-		<? 
+		<?
 		include "nav.php";
 		?>
-	<div class="jumbotron">
 		<div class="container">
-			<h1>Hello World!</h1>
-			<p>This is the 'playground' index page</p>
-			<button type="button" class="btn btn-primary"<a href="learn.php"> Learn More Here</a></button>
+			<div class="jumbotron">
+
+				<h1>Hello World!</h1>
+				<p>
+					This is the 'playground' index page
+				</p>
+				<button type="button" class="btn btn-primary"<a href="learn.php"> Learn More Here</a></button>
+				</div>
+				<div class="row">
+				<div class="col-md-4">
+				<h1> First Row</h1>
+				<p>
+					Text Text Text
+				</p>
+			</div>
+			<div class= "col-md-4">
+				<h1>Second Row</h1>
+				<p>
+					Text Text Tex
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h1>Third Row</h1>
+				<p>
+					Text Text Text
+				</p>
+			</div>
+		</div>
 		</div>
 
 		<script src="//code.jquery.com/jquery.js"></script>
