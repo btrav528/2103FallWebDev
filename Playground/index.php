@@ -31,23 +31,26 @@
 				<button type="button" class="btn btn-primary"<a href="learn.php"> Learn More Here</a></button>
 				</div>
 				<div class="row">
-				<div class="col-md-4">
+				<div class="col-sm-6 col-md-4">
 				<h1> First Row</h1>
 				<p>
 					Text Text Text
 				</p>
+				<p><a class="btn btn-primary" href="#">See More »</a></p>
 			</div>
-			<div class= "col-md-4">
+			<div class= "col-sm-6 col-md-4">
 				<h1>Second Row</h1>
 				<p>
-					Text Text Tex
+					Text Text Text
 				</p>
+				<p><a class="btn btn-primary" href="#">See More »</a></p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-sm-6 col-md-4">
 				<h1>Third Row</h1>
 				<p>
 					Text Text Text
 				</p>
+				<p><a class="btn btn-primary" href="#">See More »</a></p>
 			</div>
 		</div>
 		</div>
