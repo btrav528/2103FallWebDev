@@ -1,3 +1,16 @@
+	<?
+	$location='home';
+		
+		
+		
+		$pages= array('home'=>
+		array('url'=>'index.php', 'section'=>'home', 'title'=>'Home'), 
+		'links'=>array('links.php'),
+		 'contacts'=>array('contacts.php'));
+		 $name = $pages[$location];
+		 $msg = "Hello $name";
+	?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,21 +23,20 @@
 				padding-top: 70px;
 			}
 		</style>
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="../../assets/js/html5shiv.js"></script>
-		<script src="../../assets/js/respond.min.js"></script>
-		<![endif]-->
 	</head>
 	<body>
-
+		
 		<?
 		include "nav.php";
 		?>
 		<div class="container">
+			<pre>
+		<?print_r($pages);?>
+		</pre>
 			<div class="jumbotron">
 
 				<h1>Hello World!</h1>
+				<h2><?=$msg ?></h2>
 				<p>
 					This is the 'playground' index page
 				</p>

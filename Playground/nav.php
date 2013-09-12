@@ -44,7 +44,7 @@
 						</ul>
 					</li>
 				</ul>
-				<p class="navbar=text pull-right">
+				<p class="navbar-text pull-right">
 					Signed in as <a href="#" class="navbar-link"> Brian Travis</a>
 				</p>
 				<form class="navbar-form navbar-left" role="search">
