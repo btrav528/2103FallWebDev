@@ -61,6 +61,13 @@
 		</div>
 		</div>
 
-
+<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		 
+    	<script type="text/javascript"> 
+    	$(function(){
+    		$(".home").addClass("active");
+    	})
+    </script>
 	</body>
 </html>

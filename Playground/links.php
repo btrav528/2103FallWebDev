@@ -11,6 +11,9 @@
 		</style>
 	</head>
 	<body>
+		<?
+		include "nav.php";
+		?>
 		<div class="container">
 		<div class="well">
 			<h1>Hello There!</h1>
@@ -50,8 +53,14 @@
     <p> And This.</p>
    </div>
    </div>
-		<?
-		include "nav.php";
-		?>
+		
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		 
+    	<script type="text/javascript"> 
+    	$(function(){
+    		$(".links").addClass("active");
+    	})
+    </script>
 	</body>
 </html>
