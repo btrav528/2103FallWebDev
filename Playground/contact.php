@@ -20,21 +20,40 @@
 					</p>
 					<p>
 						<a class="btn btn-primary" href="#">learn More »</a>
-					</p>				</div>
+					</p>
+				</div>
 			</div>
+
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1> Contact me</h1>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="email" class="col-md-2 control-label">Your Email</label>
+						<div class="col-md-10">
+							<input type="email" class="form-control" id="inputEmail1" placeholder="Enter your Email here">
+						</div>
+					</div>
+
+		
+
+			<div class="form-group">
+				<label for="txt" class="col-md-2 control-label">Leave me a message!</label>
+				<div class="col-md-10">
+					<textarea class="form-control" id="txt" placeholder="Tell me a story"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+				      <input type="submit" class="btn btn-primary" value="Submit">
+				    </div>
+			</div>
+
+			</form>
+			
 		</div>
-		<div class="col-lg-8 col-lg-offset-2">
-			<h1> Contact me</h1>
-			<form class="form-horizontal">
-				<div class="form-group">
-					<label for="enterE"
-					</div>"
-					</form>
-					<?
-					include "nav.php";
-					?>
-						<p>
-							This is the contact page
-						</p>
+		<?
+		include "nav.php";
+		?>
+		
 	</body>
 </html>
