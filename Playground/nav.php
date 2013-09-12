@@ -48,8 +48,6 @@
 					Signed in as <a href="#" class="navbar-link"> Brian Travis</a>
 				</p>
 				<form class="navbar-form navbar-left" role="search">
-					<script src="http://code.jquery.com/jquery.js"></script>
-					<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+					
 			</div>
 	</nav>
