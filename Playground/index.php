@@ -37,7 +37,7 @@
 				Text Text Text
 				</p>
 				<p>
-					<a class="btn btn-primary" href="#">See More »</a>
+				<a class="btn btn-primary" href="#">See More »</a>
 				</p>
 			</div>
 			<div class= "col-sm-6 col-md-4">
@@ -61,13 +61,13 @@
 		</div>
 		</div>
 
-<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		 
-    	<script type="text/javascript"> 
-    	$(function(){
-    		$(".home").addClass("active");
-    	})
-    </script>
+
+		<script type="text/javascript">
+			$(function() {
+				$(".home").addClass("active");
+			})
+		</script>
 	</body>
 </html>

@@ -37,32 +37,30 @@
 						</div>
 					</div>
 
-		
+					<div class="form-group">
+						<label for="txt" class="col-md-2 control-label">Leave me a message!</label>
+						<div class="col-md-10">
+							<textarea class="form-control" id="txt" placeholder="Tell me a story"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-2 col-md-10">
+							<input type="submit" class="btn btn-primary" value="Submit">
+						</div>
+					</div>
 
-			<div class="form-group">
-				<label for="txt" class="col-md-2 control-label">Leave me a message!</label>
-				<div class="col-md-10">
-					<textarea class="form-control" id="txt" placeholder="Tell me a story"></textarea>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-offset-2 col-md-10">
-				      <input type="submit" class="btn btn-primary" value="Submit">
-				    </div>
+				</form>
+
 			</div>
 
-			</form>
-			
-		</div>
-		
-		<script src="http://code.jquery.com/jquery.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		 
-    	<script type="text/javascript"> 
-    	$(function(){
-    		$(".contact").addClass("active");
-    	})
-    </script>
-    
+			<script src="http://code.jquery.com/jquery.js"></script>
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+			<script type="text/javascript">
+				$(function() {
+					$(".contact").addClass("active");
+				})
+			</script>
+
 	</body>
 </html>
