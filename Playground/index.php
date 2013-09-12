@@ -17,7 +17,7 @@
 		<![endif]-->
 	</head>
 	<body>
-		
+
 		<?
 		include "nav.php";
 		?>
@@ -34,23 +34,29 @@
 				<div class="col-sm-6 col-md-4">
 				<h1> First Row</h1>
 				<p>
-					Text Text Text
+				Text Text Text
 				</p>
-				<p><a class="btn btn-primary" href="#">See More »</a></p>
+				<p>
+					<a class="btn btn-primary" href="#">See More »</a>
+				</p>
 			</div>
 			<div class= "col-sm-6 col-md-4">
 				<h1>Second Row</h1>
 				<p>
 					Text Text Text
 				</p>
-				<p><a class="btn btn-primary" href="#">See More »</a></p>
+				<p>
+					<a class="btn btn-primary" href="#">See More »</a>
+				</p>
 			</div>
 			<div class="col-sm-6 col-md-4">
 				<h1>Third Row</h1>
 				<p>
 					Text Text Text
 				</p>
-				<p><a class="btn btn-primary" href="#">See More »</a></p>
+				<p>
+					<a class="btn btn-primary" href="#">See More »</a>
+				</p>
 			</div>
 		</div>
 		</div>
