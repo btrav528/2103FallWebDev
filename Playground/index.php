@@ -1,15 +1,6 @@
-	<?
-	$location='home';
-		
-		
-		
-		$pages= array('home'=>
-		array('url'=>'index.php', 'section'=>'home', 'title'=>'Home'), 
-		'links'=>array('links.php'),
-		 'contacts'=>array('contacts.php'));
-		 $name = $pages[$location];
-		 $msg = "Hello $name";
-	?>
+<?
+$location = 'home';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -30,13 +21,9 @@
 		include "nav.php";
 		?>
 		<div class="container">
-			<pre>
-		<?print_r($pages);?>
-		</pre>
-			<div class="jumbotron">
+						<div class="jumbotron">
 
 				<h1>Hello World!</h1>
-				<h2><?=$msg ?></h2>
 				<p>
 					This is the 'playground' index page
 				</p>
