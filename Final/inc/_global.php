@@ -1,6 +1,9 @@
 <?php
-
+include_once('password.php');
 function GetConnection()
 {
-	$conn=new mysqli('localhost', 'n02207313', $sql_password, 'n02207313_db');
+	global $sql_password;
+	$conn=new mysqli('localhost', 'plotkinm', $sql_password, 'plotkinm_db');
+	return $conn;
+	
 }
