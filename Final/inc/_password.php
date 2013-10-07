@@ -1,2 +1,2 @@
 <?php
-$sql_password= 'FaceBooK';
+$sql_password = 'FaceBooK';
