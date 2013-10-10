@@ -1,8 +1,7 @@
 <?php
 include_once '../../inc/_global.php';
 
-$model = Keywords::Get();
+$model = Users::Get();
 $view = 'List.php';
-
 include '../Shared/_Layout.php';
 ?>
