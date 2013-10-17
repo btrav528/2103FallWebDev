@@ -10,7 +10,8 @@ include_once __DIR__ . '../../Models/Comments.php';
 include_once __DIR__ . '../../Models/Contact.php';
 include_once __DIR__ . '../../Models/Card.php';
 include_once __DIR__ . '../../Models/OrderContents.php';
-
+include_once __DIR__ . '../../Models/Shipping.php';
+include_once __DIR__ . '../../Models/ViewHistory.php';
 function GetConnection() {
 	global $sql_password;
 	$conn = new mysqli('localhost', 'n02207313', $sql_password, 'n02207313_db');

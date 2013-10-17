@@ -7,19 +7,19 @@
 	<?
 
 	$pages = array(
-	'supplier' => array(
-		'url' => 'Views/Supplier/', 
-		'section' => 'supplier', 
-		'title' => 'Suppliers'), 
+	'Items' => array(
+		'url' => 'Views/Items/', 
+		'section' => 'Items', 
+		'title' => 'Products'),
 	'Users' => array( 
 		'url' => 'Views/User/', 
 		'section' => 'Users', 
 		'title' => 'Users'), 
-	'Items' => array(
-		'url' => 'Views/Items/', 
-		'section' => 'Items', 
-		'title' => 'Products')
-		);
+	
+	'supplier' => array(
+		'url' => 'Views/Supplier/', 
+		'section' => 'supplier', 
+		'title' => 'Suppliers'));
 		?>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -65,7 +65,16 @@
 								<a href="Views/Card/">Credit Card Information</a>
 							</li>
 							<li>
-								<a href="Views/OrderContents/">OrderContents</a>
+								<a href="Views/OrderContents/">Order Contents</a>
+							</li>
+							<li>
+								<a href="Views/Shipping/">Shipping Addresses</a>
+							</li>
+							<li>
+								<a href="Views/Shipping/">Shipping Addresses</a>
+							</li>
+							<li>
+								<a href="Views/ViewHist/">Viewing History</a>
 							</li>
 						</ul>
 					</li>

@@ -28,7 +28,7 @@
                                                         <a href="../Items/"> Products </a>
                                                 </li>
                                                 <li class="User">
-                                                        <a href="../User/"> User </a>
+                                                        <a href="../User/"> Users </a>
                                                 </li>
                                                 <li class="Supplier">
                                                         <a href="../Supplier/"> Supplier </a>
@@ -42,8 +42,10 @@
                                           <li class="Billing"><a href="../BillingAddress/">Billing Address</a></li>
                                           <li class="Categories"><a href="../Categories/">Categories</a></li>
                                           <li class="Comments"><a href="../Comments/">Comments</a></li>
-                                          <li class'"Contact"'><a href="../Contact/">Contact Information</a></li>
-                                          <li class'"Card"'><a href="../Card/">Credit Cards</a></li>
+                                          <li class="Contact"><a href="../Contact/">Contact Information</a></li>
+                                          <li class="Card"><a href="../Card/">Credit Cards</a></li>
+                                          <li class="Shipping"><a href="../Shipping/">Shipping Address</a></li>
+                                          <li class="Viewing"><a href="../ViewHist/">Viewing History</a></li>
                                        <li>
 									<a href="../OrderContents/">Order Contents</a>
 									</li>
