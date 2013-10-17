@@ -9,11 +9,7 @@
     </style>
   </head>
   <body>
-          <header>
-                  <div class="container">
-                          <h1>My website</h1>
-                  </div>
-          </header>
+          
           
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                    <div class="container">
@@ -40,17 +36,18 @@
                                                 
                                                 
                                         <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Options <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                           <li class="Orders"><a href="../Orders/index.php">Orders</a></li>
                                           <li class="Billing"><a href="../BillingAddress/">Billing Address</a></li>
-                                          <li><a href="../Categories/">Categories</a></li>
-                                          <li><a href="../Comments/">Comments</a></li>
-                                          <li><a href="../Contact/">Contact Information</a></li>
+                                          <li class="Categories"><a href="../Categories/">Categories</a></li>
+                                          <li class="Comments"><a href="../Comments/">Comments</a></li>
+                                          <li class'"Contact"'><a href="../Contact/">Contact Information</a></li>
+                                          <li class'"Card"'><a href="../Card/">Credit Cards</a></li>
                                         </ul>
                                       </li>
                               </ul>
-                                <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Moshe Plotkin</a></p>
+                                <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Brian Travis</a></p>
                         </div>
                 </div>
         </div>

@@ -1,6 +1,6 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" type=t"text/css" rel="stylesheet"/>
 <div class="container">
-	<h2>Items</h2>
+	<h2>Categories</h2>
 
 <table class="table table-hover table-bordered ">
 	<thead>

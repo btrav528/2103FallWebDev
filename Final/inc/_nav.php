@@ -44,7 +44,7 @@
 					
 					
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Options <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
 								<a href="Views/Orders/">Orders</a>
@@ -60,6 +60,9 @@
 							</li>
 							<li>
 								<a href="Views/Contact/">Contact Information</a>
+							</li>
+							<li>
+								<a href="Views/Card/">Credit Card Information</a>
 							</li>
 						</ul>
 					</li>

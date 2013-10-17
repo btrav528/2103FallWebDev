@@ -8,6 +8,7 @@ include_once __DIR__ . '../../Models/BillingAddress.php';
 include_once __DIR__ . '../../Models/Categories.php';
 include_once __DIR__ . '../../Models/Comments.php';
 include_once __DIR__ . '../../Models/Contact.php';
+include_once __DIR__ . '../../Models/Card.php';
 
 function GetConnection() {
 	global $sql_password;
