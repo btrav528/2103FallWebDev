@@ -44,8 +44,8 @@
                                         <ul class="dropdown-menu">
                                           <li class="Orders"><a href="../Orders/index.php">Orders</a></li>
                                           <li class="Billing"><a href="../BillingAddress/">Billing Address</a></li>
-                                          <li><a href="#">Something else here</a></li>
-                                          <li><a href="#">Separated link</a></li>
+                                          <li><a href="../Categories/">Categories</a></li>
+                                          <li><a href="../Comments/">Comments</a></li>
                                           <li><a href="#">One more separated link</a></li>
                                         </ul>
                                       </li>

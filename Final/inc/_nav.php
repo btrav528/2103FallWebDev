@@ -53,10 +53,10 @@
 								<a href="Views/BillingAddress/">BillingAddresses</a>
 							</li>
 							<li>
-								<a href="#">Something else here</a>
+								<a href="Views/Categories/">Categories</a>
 							</li>
 							<li>
-								<a href="#">Separated link</a>
+								<a href="Views/Comments/">Comments</a>
 							</li>
 							<li>
 								<a href="#">One more separated link</a>
