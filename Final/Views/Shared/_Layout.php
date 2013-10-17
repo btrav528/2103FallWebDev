@@ -44,7 +44,11 @@
                                           <li class="Comments"><a href="../Comments/">Comments</a></li>
                                           <li class'"Contact"'><a href="../Contact/">Contact Information</a></li>
                                           <li class'"Card"'><a href="../Card/">Credit Cards</a></li>
-                                        </ul>
+                                       <li>
+									<a href="../OrderContents/">Order Contents</a>
+									</li>
+						</ul>
+									</ul>		
                                       </li>
                               </ul>
                                 <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Brian Travis</a></p>

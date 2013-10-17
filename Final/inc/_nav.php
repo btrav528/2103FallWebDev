@@ -64,6 +64,9 @@
 							<li>
 								<a href="Views/Card/">Credit Card Information</a>
 							</li>
+							<li>
+								<a href="Views/OrderContents/">OrderContents</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
