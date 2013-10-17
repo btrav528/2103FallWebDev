@@ -7,16 +7,16 @@
 	<?
 
 	$pages = array(
-	'home' => array(
-		'url' => 'index.php', 
-		'section' => 'home', 
-		'title' => 'Home'), 
+	'supplier' => array(
+		'url' => 'Views/Supplier/', 
+		'section' => 'supplier', 
+		'title' => 'Suppliers'), 
 	'Users' => array( 
-		'url' => 'Views/User/index.php', 
+		'url' => 'Views/User/', 
 		'section' => 'Users', 
 		'title' => 'Users'), 
 	'Items' => array(
-		'url' => 'View/Items/index.php', 
+		'url' => 'Views/Items/', 
 		'section' => 'Items', 
 		'title' => 'Products')
 		);
@@ -47,7 +47,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Action</a>
+								<a href="Views/Orders/">Orders</a>
 							</li>
 							<li>
 								<a href="#">Another action</a>
