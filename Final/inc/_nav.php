@@ -50,7 +50,7 @@
 								<a href="Views/Orders/">Orders</a>
 							</li>
 							<li>
-								<a href="#">Another action</a>
+								<a href="Views/BillingAddress/">BillingAddresses</a>
 							</li>
 							<li>
 								<a href="#">Something else here</a>
