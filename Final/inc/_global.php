@@ -18,3 +18,16 @@ function GetConnection() {
 	return $conn;
 
 }
+function FetchAll($sql) {
+		$ret = array();
+		$conn = GetConnection();
+		$result = $conn -> query($sql);
+
+		while ($rs = $result -> fetch_assoc()) {
+			$ret[] = $rs;
+		}
+
+		$conn -> close();
+		return $ret;
+	}
+

@@ -6,20 +6,7 @@
 	</head>
 	<?
 
-	$pages = array(
-	'Items' => array(
-		'url' => 'Views/Items/', 
-		'section' => 'Items', 
-		'title' => 'Products'),
-	'Users' => array( 
-		'url' => 'Views/User/', 
-		'section' => 'Users', 
-		'title' => 'Users'), 
-	
-	'supplier' => array(
-		'url' => 'Views/Supplier/', 
-		'section' => 'supplier', 
-		'title' => 'Suppliers'));
+	$pages = array('Items' => array('url' => 'Views/Items/', 'section' => 'Items', 'title' => 'Products'), 'Users' => array('url' => 'Views/User/', 'section' => 'Users', 'title' => 'Users'), 'supplier' => array('url' => 'Views/Supplier/', 'section' => 'supplier', 'title' => 'Suppliers'));
 		?>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -34,13 +21,12 @@
 				<ul class="nav navbar-nav">
 					<?
 						foreach ($pages as $key => $data) :?>
-							<li class=<?=$data['section']?>>
-								<a href=<?=$data['url']?>> <?=$data['title']?></a>
+							<li class=<?=$data['section'] ?>>
+								<a href=<?=$data['url'] ?>> <?=$data['title'] ?></a>
 							</li>	
 					
 							
-					<?	endforeach;
-		?>
+					<?	endforeach; ?>
 					
 					
 					<li class="dropdown">

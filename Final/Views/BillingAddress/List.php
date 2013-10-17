@@ -38,4 +38,4 @@ function Scripts(){ ?>
 	<script type="text/javascript">
 		$('.table').dataTable();
 	</script>
-	<?}?>
+	<?} ?>

@@ -21,7 +21,7 @@
 	<tbody>
 <? foreach($model as $rs): ?>
 
-	<tr><td><?=$rs['2013Fall_User_Id']?></td>
+	<tr><td><?=$rs['2013Fall_User_Id'] ?></td>
 		<td><?=$rs['FirstLine'] ?></td>
 		<td><?=$rs['SecondLine'] ?></td>
 		<td><?=$rs['City'] ?></td>
@@ -40,4 +40,4 @@ function Scripts(){ ?>
 	<script type="text/javascript">
 		$('.table').dataTable();
 	</script>
-	<?}?>
+	<?} ?>

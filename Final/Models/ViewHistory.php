@@ -6,16 +6,7 @@
 class View {
 
 	static public function Get() {
-		$ret = array();
-		$conn = GetConnection();
-		$result = $conn -> query('SELECT * FROM 2013Fall_ViewingHistory');
+		return FetchAll('SELECT * FROM 2013Fall_ViewingHistory');
 
-		while ($rs = $result -> fetch_assoc()) {
-			$ret[] = $rs;
-		}
-
-		$conn -> close();
-		return $ret;
-	}
-
+}
 }
