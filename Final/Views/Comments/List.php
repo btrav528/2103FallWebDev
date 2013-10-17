@@ -5,6 +5,7 @@
 <table class="table table-hover table-bordered ">
 	<thead>
 	<tr>
+		<th>ItemID</th>
 		<th>
 			Comments
 		</th>
@@ -16,7 +17,8 @@
 	<tbody>
 <? foreach($model as $rs): ?>
 
-	<tr><td><?=$rs['Comment'] ?></td>
+	<tr><td><?=$rs['Item_Id'] ?></td>
+		<td><?=$rs['Comment'] ?></td>
 	<td><?=$rs['ItemScore'] ?></td>
 		</tr>
 
