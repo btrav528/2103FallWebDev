@@ -1,27 +1,27 @@
-<?
-$location = 'home';
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Bootstrap 101 Template</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- Bootstrap -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<style type="text/css">
-			body {
-				padding-top: 70px;
-			}
-		</style>
 	</head>
-	<body>
-		<header>
-			<div class="container">
-			<h1>My Website</h1>
-			</div>
-		</header>
-			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<?
+
+	$pages = array(
+	'home' => array(
+		'url' => 'index.php', 
+		'section' => 'home', 
+		'title' => 'Home'), 
+	'Users' => array( 
+		'url' => 'Views/User/index.php', 
+		'section' => 'Users', 
+		'title' => 'Users'), 
+	'Items' => array(
+		'url' => 'View/Items/index.php', 
+		'section' => 'Items', 
+		'title' => 'Products')
+		);
+		?>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 
 		<div class="container">
@@ -32,16 +32,15 @@ $location = 'home';
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					
-						
-							<li class="Users">
-								<a href="../User/index.php"> Users</a>
+					<?
+						foreach ($pages as $key => $data) :?>
+							<li class=<?=$data['section']?>>
+								<a href=<?=$data['url']?>> <?=$data['title']?></a>
 							</li>	
-					<li class="Products">
-								<a href="../Items/index.php"> Products</a>
-							</li>
+					
 							
-		
+					<?	endforeach;
+		?>
 					
 					
 					<li class="dropdown">
@@ -73,16 +72,5 @@ $location = 'home';
 			</div>
 			
 </div>
-</div>
-<? include $view?>
-		<pt src="http://code.jquery.com/jquery.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-			<script src="Scripts/main.js"></script>
-		<? if(function_exists('Scripts')){
-			Scripts();
-			}
-			?>
-	</body>
-</html>
-
-
+	</nav>
+	
