@@ -46,7 +46,7 @@
                                           <li class="Billing"><a href="../BillingAddress/">Billing Address</a></li>
                                           <li><a href="../Categories/">Categories</a></li>
                                           <li><a href="../Comments/">Comments</a></li>
-                                          <li><a href="#">One more separated link</a></li>
+                                          <li><a href="../Contact/">Contact Information</a></li>
                                         </ul>
                                       </li>
                               </ul>

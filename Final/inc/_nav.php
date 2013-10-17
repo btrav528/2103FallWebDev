@@ -59,7 +59,7 @@
 								<a href="Views/Comments/">Comments</a>
 							</li>
 							<li>
-								<a href="#">One more separated link</a>
+								<a href="Views/Contact/">Contact Information</a>
 							</li>
 						</ul>
 					</li>

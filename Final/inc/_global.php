@@ -7,6 +7,8 @@ include_once __DIR__ . '../../Models/Orders.php';
 include_once __DIR__ . '../../Models/BillingAddress.php';
 include_once __DIR__ . '../../Models/Categories.php';
 include_once __DIR__ . '../../Models/Comments.php';
+include_once __DIR__ . '../../Models/Contact.php';
+
 function GetConnection() {
 	global $sql_password;
 	$conn = new mysqli('localhost', 'n02207313', $sql_password, 'n02207313_db');
