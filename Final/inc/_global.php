@@ -20,14 +20,18 @@ function GetConnection() {
 }
 function FetchAll($sql) {
 		$ret = array();
-		$conn = GetConnection();
-		$result = $conn -> query($sql);
-
-		while ($rs = $result -> fetch_assoc()) {
-			$ret[] = $rs;
-		}
-
-		$conn -> close();
-		return $ret;
+        $conn = GetConnection();
+        $result = $conn->query($sql);
+        
+        while ($rs = $result->fetch_assoc()) {
+                $ret[] = $rs;
+        }
+        
+        $conn->close();
+        return $ret;
 	}
-
+function Fetch_One($sql)
+{
+        $arr = FetchAll($sql);
+        return $arr[0];
+}

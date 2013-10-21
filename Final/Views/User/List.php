@@ -20,6 +20,11 @@
 	<tr><td><?=$rs['2013Fall_FirstName'] ?></td>
 		<td><?=$rs['2013Fall_LastName'] ?></td>
 		<td><?=$rs['UserLevel'] ?></td>
+		<td>
+                                        <a class="glyphicon glyphicon-file" href="?action=details&Id=<?=$rs['Id']?>"></a>
+                                        <a class="glyphicon glyphicon-pencil" href="?action=new"></a>
+                                        <a class="glyphicon glyphicon-trash" href="?action=details&Id=<?=$rs['Id']?>"></a>
+                                </td>
 		</tr>
 
 <? endforeach ?>
