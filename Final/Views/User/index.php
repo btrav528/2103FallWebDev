@@ -5,28 +5,33 @@ include_once '../../inc/_global.php';
 
 switch ($action) {
         case 'details':
-                $model  = Users::Get($_REQUEST['Id']);
-                $view         = 'details.php';                
+                $model  = Users::Get($_REQUEST['id']);
+                $view   = 'details.php';                
                 break;
                 
         case 'new':
-                
-                $view         = 'new.php';                
+			$model=Users::Blank();
+                $view  = 'new.php';                
                 break;
         
         case 'save':
-                ?> <pre><? print_r($_REQUEST); ?></pre> <?
-                $model  = Users::Get($_REQUEST['Id']);
-                $view         = 'details.php';                
+                $errors = Users::Save($_REQUEST);
+                if(!$errors){
+                        $model = $_REQUEST;
+                        $view = 'new.php';
+                }else{
+                        header("Location: ?");
+                        die();                        
+                }
                 break;
                 
         case 'edit':
-                $model  = Users::Get($_REQUEST['Id']);
+                $model  = Users::Get($_REQUEST['id']);
                 $view         = 'details.php';                
                 break;
                 
         case 'delete':
-                $model  = Users::Get($_REQUEST['Id']);
+                $model  = Users::Get($_REQUEST['id']);
                 $view         = 'details.php';                
                 break;
         
