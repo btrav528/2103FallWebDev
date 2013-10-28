@@ -21,16 +21,18 @@
                                 <td><?=$rs['2013Fall_LastName']?></td>
                                 <td><?=$rs['UserLevel']?></td>
                                 <td>
-                                        <a class="glyphicon glyphicon-file" href="?action=details&id=<?=$rs['Id']?>"></a>
-                                        <a class="glyphicon glyphicon-pencil" href="?action=new&id=<?=$rs['Id']?>"></a>
-                                        <a class="glyphicon glyphicon-trash" href="?action=details&id=<?=$rs['Id']?>"></a>
+                                        <a class="glyphicon glyphicon-file" href="?action=details&Id=<?=$rs['Id']?>"></a>
+                                        <a class="glyphicon glyphicon-pencil" href="?action=edit&Id=<?=$rs['Id']?>"></a>
+                                        <a class="glyphicon glyphicon-trash" href="?action=delete&Id=<?=$rs['Id']?>"></a>
                                 </td>
                         </tr>
                 <? endforeach ?>
                 </tbody>
         </table>
 </div>
-<? function Scripts(){ ?>
+<div class="modal fade" id="myModal">
+</div>
+  <? function Scripts(){ ?>
         <script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
         <script type="text/javascript">
                 $(".table").dataTable();
