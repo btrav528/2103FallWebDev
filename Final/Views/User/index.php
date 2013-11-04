@@ -6,13 +6,15 @@ include_once '../../inc/_global.php';
 
 switch ($action) {
         case 'details':
-                $model  = Users::Get($_REQUEST['Id']);
-                $view         = 'details.php';                
+                $model  = Users::Get($_REQUEST['id']);
+                $view         = 'details.php';
+                $title        = "Details for: $model[FirstName] $model[LastName]"        ;        
                 break;
                 
         case 'new':
                 $model = Users::Blank();
-                $view         = 'new.php';                
+                $view         = 'edit.php';                
+                $title        = "Create New User"        ;        
                 break;
         
         case 'save':
@@ -25,35 +27,42 @@ switch ($action) {
                         die();
                 }                        
                         $model = $_REQUEST;
-                        $view = 'new.php';
+                        $view = 'edit.php';
+                        $title        = "Edit: $model[FirstName] $model[LastName]"        ;        
                 break;
                 
         case 'edit':
-                $model  = Users::Get($_REQUEST['Id']);
-                $view         = 'new.php';                
+                $model  = Users::Get($_REQUEST['id']);
+                $view         = 'edit.php';                
+                $title        = "Edit: $model[FirstName] $model[LastName]"        ;        
                 break;
                 
         case 'delete':
-                $model  = Users::Get($_REQUEST['Id']);
-                $view         = 'details.php';                
+                if(isset($_POST['id'])){
+                        $errors = Users::Delete($_REQUEST['id']);                        
+                        if(!$errors){
+                                header("Location: ?");
+                                die();
+                        }                                                        
+                }
+                $model  = Users::Get($_REQUEST['id']);
+                $view         = 'delete.php';                                        
+                $title        = "Edit: $model[FirstName] $model[LastName]"        ;        
                 break;
         
         default:
                 $model  = Users::Get();
-                $view         = 'List.php';                
+                $view         = 'List.php';
+                $title        = 'Users';                
                 break;
 }
 
 switch ($format) {
-        case 'min':
-                include $view;
-                break;
         case 'dialog':
-                include '../Shared/_Dialog.php';
+                include '../Shared/_Dialog.php';                                
                 break;
         
         default:
-                include '../Shared/_Layout.php';
-                
+                include '../Shared/_Layout.php';                
                 break;
 }
