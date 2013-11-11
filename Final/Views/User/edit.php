@@ -13,14 +13,14 @@
                 <div class="form-group <?=isset($errors['FirstName']) ? 'has-error' : ''?>">
                         <label for="FirstName" class="col-sm-2 control-label">First Name</label>
                         <div class="col-sm-10">
-                                <input type="text" name="FirstName" id="FirstName" placeholder="First Name" class="form-control " value="<?=$model['FirstName']?>"  />
+                                <input type="text" name="FirstName" id="FirstName" placeholder="First Name" class="form-control " value="<?=$model['2013Fall_FirstName']?>"  />
                         </div>
                         <span><?=@$errors['FirstName']?></span>
                 </div>
                 <div class="form-group <?=isset($errors['LastName']) ? 'has-error' : ''?>">
                         <label for="LastName" class="col-sm-2 control-label">Last Name</label>
                         <div class="col-sm-10">
-                                <input type="text" name="LastName" id="LastName" placeholder="Last Name" class="form-control " value="<?=$model['LastName']?>"  />
+                                <input type="text" name="LastName" id="LastName" placeholder="Last Name" class="form-control " value="<?=$model['2013Fall_LastName']?>"  />
                         </div>
                         <span><?=@$errors['LastName']?></span>
                 </div>
@@ -31,10 +31,10 @@
                         </div>
                         <span><?=@$errors['Password']?></span>
                 </div>
-                <div class="form-group <?=isset($errors['UserType']) ? 'has-error' : ''?>">
+                <div class="form-group <?=isset($errors['UserLevel']) ? 'has-error' : ''?>">
                         <label for="UserType" class="col-sm-2 control-label">User Type</label>
                         <div class="col-sm-10">
-                                <input type="text" name="UserType" id="UserType" placeholder="User Type" class="form-control "  value="<?=$model['UserType']?>" />
+                                <input type="text" name="UserType" id="UserType" placeholder="User Type" class="form-control "  value="<?=$model['UserLevel']?>" />
                         </div>
                         <span><?=@$errors['UserType']?></span>
                 </div>
@@ -47,3 +47,8 @@
                 </div>
         </form>
 </div>
+<script type="text/javascript">
+        $(function(){
+                $("#UserType").val(<?=$model['UserLevel']?>);
+        })        
+</script>

@@ -8,7 +8,7 @@ switch ($action) {
         case 'details':
                 $model  = Users::Get($_REQUEST['id']);
                 $view         = 'details.php';
-                $title        = "Details for: $model[FirstName] $model[LastName]"        ;        
+                $title        = "Edit: ".$model['2013Fall_FirstName']. $model['2013Fall_LastName']      ;        
                 break;
                 
         case 'new':
@@ -17,24 +17,25 @@ switch ($action) {
                 $title        = "Create New User"        ;        
                 break;
         
-        case 'save':
+  
+         case 'save':
                 $errors = Users::Validate($_REQUEST);
                 if(!$errors){
                         $errors = Users::Save($_REQUEST);                        
                 }
                 if(!$errors){
-                        header("Location: ?");
+                        header("Location: ?status=Saved&Id=".$_REQUEST['Id']);
                         die();
                 }                        
                         $model = $_REQUEST;
                         $view = 'edit.php';
-                        $title        = "Edit: $model[FirstName] $model[LastName]"        ;        
+                        $title        = "Edit: " .$model['FirstName']. $model['LastName']      ;        
                 break;
                 
         case 'edit':
                 $model  = Users::Get($_REQUEST['id']);
                 $view         = 'edit.php';                
-                $title        = "Edit: $model[FirstName] $model[LastName]"        ;        
+                $title        = "Edit:".$model['2013Fall_FirstName']. $model['2013Fall_LastName']       ;        
                 break;
                 
         case 'delete':
@@ -47,7 +48,7 @@ switch ($action) {
                 }
                 $model  = Users::Get($_REQUEST['id']);
                 $view         = 'delete.php';                                        
-                $title        = "Edit: $model[FirstName] $model[LastName]"        ;        
+                $title        = "Edit:".$model['2013Fall_FirstName']. $model['2013Fall_LastName']        ;        
                 break;
         
         default:

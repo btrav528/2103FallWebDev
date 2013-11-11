@@ -6,6 +6,10 @@
         </div>
         <div class="modal-body">
           <? include $view; ?>
+         
+        </div>
+        <div class="modal-footer">
+        	 <button type="button" class="btn btn-default" data-dismiss="modal" id="reset">Close</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

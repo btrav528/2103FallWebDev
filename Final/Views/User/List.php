@@ -21,9 +21,9 @@
                                 <td><?=$rs['2013Fall_LastName']?></td>
                                 <td><?=$rs['UserLevel']?></td>
                                 <td>
-                                        <a class="glyphicon glyphicon-file" href="?action=details&id=<?=$rs['Id']?>&format=dialog" data-toggle="modal" data-target="#myModal"></a>
-                                        <a class="glyphicon glyphicon-pencil" href="?action=edit&id=<?=$rs['Id']?>&format=dialog" data-toggle="modal" data-target="#myModal"></a>
-                                        <a class="glyphicon glyphicon-trash" href="?action=delete&id=<?=$rs['Id']?>&format=dialog" data-toggle="modal" data-target="#myModal"></a>
+                                        <a class="glyphicon glyphicon-file" href="?action=details&id=<?=$rs['Id']?>" ></a>
+                                        <a class="glyphicon glyphicon-pencil" href="?action=edit&id=<?=$rs['Id']?>" ></a>
+                                        <a class="glyphicon glyphicon-trash" href="?action=delete&id=<?=$rs['Id']?>" ></a>
                                 </td>
                         </tr>
                 <? endforeach ?>
