@@ -17,13 +17,11 @@ class Users {
         {
                 $conn = GetConnection();
                 $row2 = Users::Encode($row, $conn);
-                if($row['Id']){
-                        $sql =        " UPDATE 2013Fall_User "
-                                .        " Set 2013Fall_FirstName='$row2[FirstName]', 2013Fall_LastName='$row2[LastName]', Password='$row2[Password]', UserLevel='$row2[UserType]' "
-                                .        " WHERE Id=$row2[id] ";
+                if($row['id']){
+                        $sql ="UPDATE 2013Fall_User Set 2013Fall_FirstName='$row2[FirstName]', 2013Fall_LastName='$row2[LastName]', Password='$row2[Password]', UserLevel='$row2[UserType]')" 
+                        ."WHERE Id='$row2[id]'" ;
                 }else{
-                        $sql =         " Insert Into 2013Fall_User (2013Fall_FirstName, 2013Fall_LastName, Password, UserLevel) "
-                                .        " Values ('$row2[FirstName]', '$row2[LastName]', '$row2[Password]', '$row2[UserType]') ";                        
+                        $sql ="Insert Into 2013Fall_User (2013Fall_FirstName, 2013Fall_LastName, Password, UserLevel) Values ('$row2[FirstName]', '$row2[LastName]', '$row2[Password]', '$row2[UserType]') ";                        
                 }
                 
                 $conn->query($sql);
