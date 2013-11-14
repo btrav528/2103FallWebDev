@@ -22,7 +22,7 @@ switch ($action) {
         case 'edit':
                 $model  = Card::Get($_REQUEST['id']);
                 $view         = 'edit.php';                
-;        
+       
                 break;
                 
 	
