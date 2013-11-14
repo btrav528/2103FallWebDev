@@ -5,6 +5,27 @@ include_once '../../inc/_global.php';
 @$format = $_REQUEST['format'];
 
 switch ($action) {
+	case 'save':
+                $errors = Card::Validate($_REQUEST);
+                if(!$errors){
+                        $errors = Card::Save($_REQUEST);                        
+                }
+                if(!$errors){
+                        header("Location: ?status=Saved&Id=".$_REQUEST['Id']);
+                        die();
+                }                        
+                        $model = $_REQUEST;
+                        $view = 'edit.php';
+       
+                break;
+                
+        case 'edit':
+                $model  = Card::Get($_REQUEST['id']);
+                $view         = 'edit.php';                
+;        
+                break;
+                
+	
         case 'details':
                 $model  = Card::Get($_REQUEST['id']);
                 $view         = 'details.php';      
