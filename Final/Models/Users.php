@@ -17,13 +17,15 @@ class Users {
         {
                 $conn = GetConnection();
                 $row2 = Users::Encode($row, $conn);
-                if($row['id']){
-                        $sql ="UPDATE 2013Fall_User Set 2013Fall_FirstName='$row2[FirstName]', 2013Fall_LastName='$row2[LastName]', Password='$row2[Password]', UserLevel='$row2[UserType]')" 
-                        ."WHERE Id='$row2[id]'" ;
+                if($row['Id']!=null){
+                        $sql ="UPDATE 2013Fall_User " 
+                        ."SET 2013Fall_FirstName='".$row2['2013Fall_FirstName']."', 2013Fall_LastName='".$row2["2013Fall_LastName"]."', Password='".$row2["Password"]."', UserLevel='".$row2["UserLevel"]
+                        ."' WHERE Id='".$row2['Id']."';";
                 }else{
-                        $sql ="Insert Into 2013Fall_User (2013Fall_FirstName, 2013Fall_LastName, Password, UserLevel) Values ('$row2[FirstName]', '$row2[LastName]', '$row2[Password]', '$row2[UserType]') ";                        
+                        $sql ="Insert Into 2013Fall_User (2013Fall_FirstName, 2013Fall_LastName, Password, UserLevel) Values ('".$row2["2013Fall_FirstName"]."', '".$row2["2013Fall_LastName"]."', '"
+                        .$row2["Password"]."', '".$row2["UserLevel"]."') ";                        
                 }
-                
+                echo $sql;
                 $conn->query($sql);
                 //echo $sql; 
                 $error = $conn->error;                
@@ -37,16 +39,16 @@ class Users {
         }
 
 	static public function Blank() {
-		return array('2013Fall_FirstName' => null, '2013Fall_LastName' => null, 'Password' => null, 'UserLevel' => null);
+		return array('2013Fall_FirstName' => null, '2013Fall_LastName' => null, 'Password' => null, 'UserLevel' => null, 'Id' =>null);
 	}
 
 	static public function Validate($row) {
 		$errors = array();
-		if (!$row['FirstName'])
+		if (!$row['2013Fall_FirstName'])
 			$errors['FirstName'] = 'Id required';
-		if (!$row['LastName'])
+		if (!$row['2013Fall_LastName'])
 			$errors['LastName'] = 'Id required';
-		if (!$row['UserType'])
+		if (!$row['UserLevel'])
 			$errors['UserType'] = 'Id required';
 
 		return count($errors) ? $errors : null;

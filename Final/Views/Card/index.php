@@ -1,7 +1,44 @@
 <?php
 include_once '../../inc/_global.php';
 
-$model = Card::Get();
-$view = 'List.php';
-include '../Shared/_Layout.php';
-?>
+@$action = $_REQUEST['action'];
+@$format = $_REQUEST['format'];
+
+switch ($action) {
+        case 'details':
+                $model  = Card::Get($_REQUEST['id']);
+                $view         = 'details.php';      
+                break;
+          case 'new':
+                $model = Card::Blank();
+                $view         = 'edit.php';                
+                $title        = "Create New User"        ;        
+                break;
+         case 'delete':
+                if(isset($_POST['id'])){
+                        $errors = Card::Delete($_REQUEST['id']);                        
+                        if(!$errors){
+                                header("Location: ?");
+                                die();
+                        }                                                        
+                }
+                $model  = Card::Get($_REQUEST['id']);
+                $view         = 'delete.php';                                        
+                $title        = "Delete:".$model['CardNumber'];      ;        
+                break;
+        default:
+                $model  = Card::Get();
+                $view         = 'List.php';
+                $title        = 'Credit Cards';                
+                break;
+}
+
+switch ($format) {
+        case 'dialog':
+                include '../Shared/_Dialog.php';                                
+                break;
+        
+        default:
+                include '../Shared/_Layout.php';                
+                break;
+}

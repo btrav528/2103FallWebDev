@@ -29,7 +29,7 @@ switch ($action) {
                 }                        
                         $model = $_REQUEST;
                         $view = 'edit.php';
-                        $title        = "Edit: " .$model['FirstName']. $model['LastName']      ;        
+                        $title        = "Edit: " .$model['2013Fall_FirstName']. $model['LastName']      ;        
                 break;
                 
         case 'edit':

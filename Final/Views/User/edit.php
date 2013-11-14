@@ -8,19 +8,19 @@
                 </ul>
         <? endif; ?>
         <form action="?action=save" method="post"  class="form-horizontal row">
-                <input type="hidden" name="id" value="<?=$model['Id']?>" />
+                <input type="hidden" name="Id" value="<?=$model['Id']?>" />
                 
                 <div class="form-group <?=isset($errors['FirstName']) ? 'has-error' : ''?>">
                         <label for="FirstName" class="col-sm-2 control-label">First Name</label>
                         <div class="col-sm-10">
-                                <input type="text" name="FirstName" id="FirstName" placeholder="First Name" class="form-control " value="<?=$model['2013Fall_FirstName']?>"  />
+                                <input type="text" name="2013Fall_FirstName" id="2013Fall_FirstName" placeholder="First Name" class="form-control " value="<?=$model['2013Fall_FirstName']?>"  />
                         </div>
                         <span><?=@$errors['FirstName']?></span>
                 </div>
                 <div class="form-group <?=isset($errors['LastName']) ? 'has-error' : ''?>">
                         <label for="LastName" class="col-sm-2 control-label">Last Name</label>
                         <div class="col-sm-10">
-                                <input type="text" name="LastName" id="LastName" placeholder="Last Name" class="form-control " value="<?=$model['2013Fall_LastName']?>"  />
+                                <input type="text" name="2013Fall_LastName" id="2013Fall_LastName" placeholder="Last Name" class="form-control " value="<?=$model['2013Fall_LastName']?>"  />
                         </div>
                         <span><?=@$errors['LastName']?></span>
                 </div>
@@ -31,10 +31,10 @@
                         </div>
                         <span><?=@$errors['Password']?></span>
                 </div>
-                <div class="form-group <?=isset($errors['UserLevel']) ? 'has-error' : ''?>">
+                <div class="form-group <?=isset($errors['UserType']) ? 'has-error' : ''?>">
                         <label for="UserType" class="col-sm-2 control-label">User Type</label>
                         <div class="col-sm-10">
-                                <input type="text" name="UserType" id="UserType" placeholder="User Type" class="form-control "  value="<?=$model['UserLevel']?>" />
+                                <input type="text" name="UserLevel" id="UserLevel" placeholder="User Type" class="form-control "  value="<?=$model['UserLevel']?>" />
                         </div>
                         <span><?=@$errors['UserType']?></span>
                 </div>
@@ -49,6 +49,6 @@
 </div>
 <script type="text/javascript">
         $(function(){
-                $("#UserType").val(<?=$model['UserLevel']?>);
+                $("#UserType").val(<?=$model['UserType']?>);
         })        
 </script>
