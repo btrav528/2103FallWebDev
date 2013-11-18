@@ -1,47 +1,99 @@
-<link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" type=t"text/css" rel="stylesheet"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+<style>
+        .table tr.success2, .table tr.success2 td{
+                background-color: #FFAA00 !important; 
+        }
+        #table-wrapper{
+                transition: width .5s;
+                -webkit-transition: width .5s;
+        }
+</style>
 <div class="container">
-	<h2>Addresses</h2>
-<a href="?action=new">Add Address</a>
-<table class="table table-hover table-bordered ">
-	<thead>
-	<tr>
-		<th>
-			Line One	
-		</th>
-		<th>
-			Line Two
-		</th>
-		<th>City</th>
-		<th>State</th>
-		<th>Zip Code</th>
-		<th>Country</th>
-		<th></th>
-	</tr>
-	</thead>
-	<tbody>
-<? foreach($model as $rs): ?>
-
-	<tr><td><?=$rs['LineOne'] ?></td>
-		<td><?=$rs['LineTwo'] ?></td>
-		<td><?=$rs['City'] ?></td>
-		<td><?=$rs['State'] ?></td>
-		<td><?=$rs['ZipCode'] ?></td>
-		<td><?=$rs['Country'] ?></td>
-		<td>
-                                        <a class="glyphicon glyphicon-file" href="?action=details&id=<?=$rs['Id']?>" ></a>
-                                        <a class="glyphicon glyphicon-pencil" href="?action=edit&id=<?=$rs['Id']?>" ></a>
-                                        <a class="glyphicon glyphicon-trash" href="?action=delete&id=<?=$rs['Id']?>" ></a>
-                                </td>
-		</tr>
-
-<? endforeach ?>
-</tbody>
-</table>
+        
+        <h2>Users</h2>
+        
+        <? if(isset($_REQUEST['status']) && $_REQUEST['status'] == 'Saved'): ?>
+                <div class="alert alert-success">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <b>Success!</b> You're User has been saved.
+                </div>
+        <? endif; ?>
+        
+        <a href="?action=new">Add Contact</a>
+        <div id="table-wrapper" class="col-md-12">
+        <table class="table table-hover table-bordered table-striped">
+                <thead>
+                <tr>
+                        <th>First Address Line</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <? foreach ($model as $rs): ?>
+                        <? include 'item.php'; ?>
+                <? endforeach ?>
+                </tbody>
+        </table>
+        </div>
+        <div id="details" class="col-md-6"></div>
 </div>
-<?
-function Scripts(){ ?>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
-	<script type="text/javascript">
-		$('.table').dataTable();
-	</script>
-	<?} ?>
+
+<div id="myModal" class="modal fade">
+        
+</div>
+
+
+</div>
+  <? function Scripts(){ ?>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+                $(".table").dataTable();
+                $(".alert .close").click(function(){
+                        $(this).closest(".alert").slideUp();
+                });
+                
+                /*
+                $(".table tr").click(function(){
+                });
+                */
+                $(".table a").click(function(){
+                        
+                        
+                        if($(this).closest("tr").hasClass("success2")){
+                                $(".success2").removeClass("success2");
+                                $("#table-wrapper").removeClass("col-md-6").addClass("col-md-12");
+                                $("#details").html('');                        
+                        }else{
+                                $(".success2").removeClass("success2");
+                                $(this).closest("tr").addClass("success2");
+                                $("#table-wrapper").removeClass("col-md-12").addClass("col-md-6");
+                                
+                                $("#details").load(this.href, {format: "plain"}, function(){
+                                        $("#details form").submit(HandleSubmit);                                        
+                                });                                
+                        }
+                        
+                        return false;
+                });
+                
+                var HandleSubmit = function (){
+                        var data = $(this).serializeArray();
+                        data.push({name:'format', value:'plain'});
+                        $.post(this.action, data, function(results){
+                                if($(results).find("form").length){
+                                        $("#details").html(results);                                        
+                                }else{
+                                        $(".success2").html($(results).html())
+                                }
+                        });
+                        
+                        return false;
+                }
+        })
+        </script>
+<? } ?>

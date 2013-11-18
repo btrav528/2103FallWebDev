@@ -52,7 +52,7 @@ class Comments {
                 $row2 = BillingAddress::Encode($row, $conn);
                 if($row['Id']!=null){
                         $sql ="UPDATE 2013Fall_Comments " 
-                        ."SET Comment='".$row2['Comment']."',ItemScore='".$row2["ItemScore"]."',Item_Id='1'"
+                        ."SET Comment='".$row2['Comment']."', ItemScore='".$row2["ItemScore"]."', Item_Id='1'"
                         ."' WHERE Id='".$row2['Id']."';";
                 }else{
                         $sql ="Insert Into 2013Fall_Comments (Comment, ItemScore, Item_Id) Values ('".$row2["Comment"]."', '".$row2["ItemScore"]."', '1') ";                        
