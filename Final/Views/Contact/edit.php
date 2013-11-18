@@ -11,37 +11,37 @@
                 <input type="hidden" name="Id" value="<?=$model['Id']?>" />
                 
                 <div class="form-group <?=isset($errors['PrimaryEmail']) ? 'has-error' : ''?>">
-                        <label for="PrimaryEmail" class="col-sm-2 control-label">Name on the Card</label>
+                        <label for="PrimaryEmail" class="col-sm-2 control-label">Email Address</label>
                         <div class="col-sm-10">
-                                <input type="text" name="PrimaryEmail" id="PrimaryEmail" placeholder="Name On Card" class="form-control " value="<?=$model['PrimaryEmail']?>"  />
+                                <input type="text" name="PrimaryEmail" id="PrimaryEmail" placeholder="Email Address" class="form-control " value="<?=$model['PrimaryEmail']?>"  />
                         </div>
                         <span><?=@$errors['PrimaryEmail']?></span>
                 </div>
                 <div class="form-group <?=isset($errors['SecondaryEmail']) ? 'has-error' : ''?>">
-                        <label for="SecondaryEmail" class="col-sm-2 control-label">Card Number</label>
+                        <label for="SecondaryEmail" class="col-sm-2 control-label">Secondary Email</label>
                         <div class="col-sm-10">
-                                <input type="text" name="SecondaryEmail" id="SecondaryEmail" placeholder="Card Number" class="form-control " value="<?=$model['SecondaryEmail']?>"  />
+                                <input type="text" name="SecondaryEmail" id="SecondaryEmail" placeholder="Secondary Email" class="form-control " value="<?=$model['SecondaryEmail']?>"  />
                         </div>
                         <span><?=@$errors['SecondaryEmail']?></span>
                 </div>
                 <div class="form-group <?=isset($errors['HomePhone']) ? 'has-error' : ''?>">
-                        <label for="HomePhone" class="col-sm-2 control-label">Security Code</label>
+                        <label for="HomePhone" class="col-sm-2 control-label">Home Phone Number</label>
                         <div class="col-sm-10">
-                                <input type="password" name="HomePhone" id="HomePhone" placeholder="Security Code" class="form-control "  value="<?=$model['HomePhone']?>" />
+                                <input type="text" name="HomePhone" id="HomePhone" placeholder="Home Phone Number" class="form-control "  value="<?=$model['HomePhone']?>" />
                         </div> 
                         <span><?=@$errors['HomePhone']?></span>
                 </div>
                 <div class="form-group <?=isset($errors['CellPhone']) ? 'has-error' : ''?>">
-                        <label for="CellPhone" class="col-sm-2 control-label">Expiration Date</label>
+                        <label for="CellPhone" class="col-sm-2 control-label">Cell Phone Number</label>
                         <div class="col-sm-10">
-                                <input type="text" name="CellPhone" id="CellPhone" placeholder="Expiration Date in YYYY-MM-DD Format" class="form-control "  value="<?=$model['CellPhone']?>" />
+                                <input type="text" name="CellPhone" id="CellPhone" placeholder="Cell Phone Number" class="form-control "  value="<?=$model['CellPhone']?>" />
                         </div>
                         <span><?=@$errors['CellPhone']?></span>
                 </div>
                 <div class="form-group <?=isset($errors['OtherPhone']) ? 'has-error' : ''?>">
-                        <label for="OtherPhone" class="col-sm-2 control-label">Optional Card OtherPhone</label>
+                        <label for="OtherPhone" class="col-sm-2 control-label">Other Phone</label>
                         <div class="col-sm-10">
-                                <input type="text" name="OtherPhone" id="OtherPhone" placeholder="Card OtherPhone (Optional)" class="form-control "  value="<?=$model['OtherPhone']?>" />
+                                <input type="text" name="OtherPhone" id="OtherPhone" placeholder="Optional Phone Number" class="form-control "  value="<?=$model['OtherPhone']?>" />
                         </div>
                         <span><?=@$errors['OtherPhone']?></span>
                 </div>

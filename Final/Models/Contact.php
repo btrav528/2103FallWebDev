@@ -5,7 +5,7 @@
  */
 class Contact {
 	static public function Blank() {
-		return array('PrimaryEmail' => null, 'SecondaryEmail' => null, 'HomePhone' => null, 'CellPhone' => null, 'OtherPhone' =>null, 'User_Id' =>null);
+		return array('PrimaryEmail' => null, 'SecondaryEmail' => null, 'HomePhone' => null, 'CellPhone' => null, 'OtherPhone' =>null, 'Id' =>null);
 	}
 
 	static public function Get($id = null) {
@@ -18,14 +18,9 @@ class Contact {
 	static public function Validate($row) {
 		$errors = array();
 		if (!$row['PrimaryEmail'])
-			$errors['PrimaryEmail'] = 'Id required';
-		if (!$row['SecondaryEmail'])
-			$errors['SecondaryEmail'] = 'Id required';
+			$errors['Primary Email'] = 'required';
 		if (!$row['HomePhone'])
-			$errors['HomePhone'] = 'Id required';
-		if (!$row['CellPhone'])
-			$errors['CellPhone'] = 'Id required';
-
+			$errors['HomePhone'] = 'required';
 		return count($errors) ? $errors : null;
 	}
 	static public function Delete($id) {
@@ -57,10 +52,12 @@ static function Encode($row, $conn)
                 $row2 = Users::Encode($row, $conn);
                 if($row['Id']!=null){
                         $sql ="UPDATE 2013Fall_Contact " 
-                        ."SET PrimaryEmail='".$row2['PrimaryEmail']."', SecondaryEmail='".$row2["SecondaryEmail"]."', HomePhone='".$row2["HomePhone"]."', CellPhone='".$row2["CellPhone"]."', OtherPhone='".$row2["OtherPhone"]
+                        ."SET PrimaryEmail='".$row2['PrimaryEmail']."', SecondaryEmail='"
+                        .$row2["SecondaryEmail"]."', HomePhone='".$row2["HomePhone"]."', CellPhone='".$row2["CellPhone"]."', OtherPhone='"
+                        .$row2["OtherPhone"]
                         ."' WHERE Id='".$row2['Id']."';";
                 }else{
-                        $sql ="Insert Into 2013Fall_Contact (PrimaryEmail, SecondaryEmail, HomePhone, CellPhone, OtherPhone,BillingAddress_Id, User_Id ) Values ('".$row2["PrimaryEmail"]."', '".$row2["SecondaryEmail"]."', '"
+                        $sql ="Insert Into 2013Fall_Contact (PrimaryEmail, SecondaryEmail, HomePhone, CellPhone, OtherPhone, User_Id ) Values ('".$row2["PrimaryEmail"]."', '".$row2["SecondaryEmail"]."', '"
                         .$row2["HomePhone"]."', '".$row2["CellPhone"]."', '".$row2["OtherPhone"]. "', '1') ";                        
                 }
                 echo $sql;
