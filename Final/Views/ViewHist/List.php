@@ -10,12 +10,12 @@
 </style>
 <div class="container">
         
-        <h2>Users</h2>
+        <h2>Viewing History</h2>
         
         <? if(isset($_REQUEST['status']) && $_REQUEST['status'] == 'Saved'): ?>
                 <div class="alert alert-success">
                         <button type="button" class="close" aria-hidden="true">&times;</button>
-                        <b>Success!</b> Your Viewing history.
+                        <b>Success!</b> Your Viewing history has been saved.
                 </div>
         <? endif; ?>
         

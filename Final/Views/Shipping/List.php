@@ -10,7 +10,7 @@
 </style>
 <div class="container">
         
-        <h2>Users</h2>
+        <h2>Shipping Addresses</h2>
         
         <? if(isset($_REQUEST['status']) && $_REQUEST['status'] == 'Saved'): ?>
                 <div class="alert alert-success">
@@ -19,7 +19,7 @@
                 </div>
         <? endif; ?>
         
-        <a href="?action=new">Add Contact</a>
+        <a href="?action=new">Add Address</a>
         <div id="table-wrapper" class="col-md-12">
         <table class="table table-hover table-bordered table-striped">
                 <thead>

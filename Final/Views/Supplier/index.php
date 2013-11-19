@@ -8,7 +8,7 @@ switch ($action) {
         case 'details':
                 $model  = Supplier::Get($_REQUEST['id']);
                 $view         = 'details.php';
-                $title        = "Edit: ".$model['SupplierName'] ;        
+        
                 break;
                 
         case 'new':
@@ -29,13 +29,13 @@ switch ($action) {
                 }                        
                         $model = $_REQUEST;
                         $view = 'edit.php';
-                        $title        = "Edit: " .$model['SupplierName'] ;        
+      
                 break;
                 
         case 'edit':
                 $model  = Supplier::Get($_REQUEST['id']);
                 $view         = 'edit.php';                
-                $title        = "Edit:".$model['SupplierName'] ;        
+      
                 break;
                 
         case 'delete':
@@ -48,13 +48,13 @@ switch ($action) {
                 }
                 $model  = Supplier::Get($_REQUEST['id']);
                 $view         = 'delete.php';                                        
-                $title        = "Edit:".$model['SupplierName'];        
+        
                 break;
         
         default:
                 $model  = Supplier::Get();
                 $view         = 'List.php';
-                $title        = 'Supplier';                
+              
                 break;
 }
 

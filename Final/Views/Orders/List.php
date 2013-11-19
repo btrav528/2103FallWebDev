@@ -10,16 +10,16 @@
 </style>
 <div class="container">
         
-        <h2>Users</h2>
+        <h2>Orders</h2>
         
         <? if(isset($_REQUEST['status']) && $_REQUEST['status'] == 'Saved'): ?>
                 <div class="alert alert-success">
                         <button type="button" class="close" aria-hidden="true">&times;</button>
-                        <b>Success!</b> Category has been saved.
+                        <b>Success!</b> Order has been saved.
                 </div>
         <? endif; ?>
         
-        <a href="?action=new">Add Contact information</a>
+        <a href="?action=new">Add Order</a>
         <div id="table-wrapper" class="col-md-12">
         <table class="table table-hover table-bordered table-striped">
                 <thead>
