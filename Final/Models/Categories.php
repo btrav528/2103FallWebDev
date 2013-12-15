@@ -46,7 +46,7 @@ class Categories {
 		static public function Save($row)
         {
                 $conn = GetConnection();
-                $row2 = BillingAddress::Encode($row, $conn);
+                $row2 = Categories::Encode($row, $conn);
                 if($row['Id']!=null){
                         $sql ="UPDATE 2013Fall_Category " 
                         ."SET Name='".$row2['Name']
