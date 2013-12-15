@@ -1,0 +1,3 @@
+RewriteEngine On
+
+ErrorDocument 404 /~N02276249/2013/FINAL/Views/Errors/?id=404

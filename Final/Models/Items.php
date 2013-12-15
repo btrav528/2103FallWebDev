@@ -4,6 +4,42 @@
  *
  */
 class Items {
+	static public function FrontAll()
+        {
+                        $sql = "        Select *, P.Id AS P_Id, C.Id AS C_Id, M.Id AS M_Id 
+                                                From 2013NewFall_Products P 
+                                                        JOIN 2013Fall_Category C on P.ProductType = C.Id
+                                                        JOIN 2013Fall_Manufactures M on P.Manufacture_id = M.Id
+                                                ORDER BY P.id
+                                        ";
+                        return fetch_all($sql);                
+        }
+	
+	static public function GetItemsInCategory($CategoryId)
+        {
+                $sql = " SELECT * FROM 2013Fall_Item P
+                                 Where P.Category_Id = $CategoryId
+                ";
+                return fetch_all($sql);
+        }
+		static public function GetByCategory($id=null)
+        {
+                        $sql = "        SELECT *
+                                                FROM 2013Fall_Products WHERE Product_Category_id=$id
+                                        ";
+                        return fetch_all($sql);                        
+        }
+		 static public function FrontType($id=null)
+        {
+                        $sql = "        Select *, P.Id AS P_Id, K.Id AS K_Id, M.Id AS M_Id 
+                                                From 2013NewFall_Products P 
+                                                        JOIN 2013NewFall_Keywords K on P.ProductType = K.id
+                                                        JOIN 2013NewFall_Manufactures M on P.Manufacture_id = M.id
+                                                WHERE K.id='$id'
+                                                ORDER BY P.id
+                                        ";
+                        return fetch_all($sql);                
+        }        
 
 	static public function Get($id = null) {
 		if (isset($id)) {
@@ -12,6 +48,12 @@ class Items {
 			return FetchAll('SELECT * FROM 2013Fall_Item');
 		}
 	}
+	
+	static public function GetCategories()
+        {
+                $sql = " SELECT * sFROM 2013Fall_Category ";
+                return fetch_all($sql);
+        }
 
 	static public function Save($row)
         {

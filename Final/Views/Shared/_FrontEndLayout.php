@@ -15,7 +15,7 @@
                   </div>
           </header>
           
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default" role="navigation">
                    <div class="container">
                            <div class="navbar-header">
                                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".nav-c">
@@ -45,7 +45,7 @@
                                         </ul>
                                       </li>
                               </ul>
-                                <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link"><? $user=Auth::GetUser(); echo $user['LastName']; ?></a></p>
+                                <p class="navbar-text pull-right" id="shopping-cart"><a href="#" class="navbar-link">Cart</a></p>
                         </div>
                 </div>
         </div>
