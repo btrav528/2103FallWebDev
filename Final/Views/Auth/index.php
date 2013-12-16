@@ -15,14 +15,9 @@ switch ($action)
                         
                 case 'submitLogin':
                         Auth::LogIn($_REQUEST['LastName'], $_REQUEST['Password']);
-            if(isset($user) && $user['Name'] == 'Admin')
-                        {
-                                header("Location: ../Users/");                                
-                        }
-                        else
-                        {
+            
                                 header("Location: ../Home/");
-                        }
+                        
                         break;
 }
 

@@ -22,12 +22,22 @@ class Orders {
                 } else {
                         return false;
                 }
+				$conn=GetConnection();
+				
+					foreach ($cart as $cartkey => $value){
+						$last=query('SELECT Id FROM 2013Fall_Orders ORDER BY Id DESC LIMIT 1');
+						$sql="Insert Into 2013Fall_OrderContents('Item_Id', 2013Fall_Orders_Id) Values('$cart[Item_Id]','$last')";
+						$conn->query($sql);
+                		$error = $conn->error;                                        
+               			 $conn -> close();
+					}
+					
         }
         
                 static public function FinalSaleDetails($row, $orderNumber) 
         {
                 $conn = GetConnection();
-                        $sql = " Insert Into 2013Fall_OrderDetails (`OrderTotal`, `OrderNumber`) " . 
+                        $sql = " Insert Into 2013Fall_Order (`OrderTotal`, `OrderNumber`) " . 
                                         " Values ('$row[Price]', '$orderNumber')";
                                         
                 $conn->query($sql);
