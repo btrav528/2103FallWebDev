@@ -61,6 +61,6 @@
         </form>
         <div class="col-sm-offset-2 col-md-4">
                 <a href="../Shipping/index.php?action=new" class="btn btn-success " role="button" align="center">Add Address</a>
-                <a href="?action=newPayment" class="btn btn-success" role="button">Add Payment</a>
+                <a href="../Card/index.php?action=new" class="btn btn-success" role="button">Add Payment</a>
         </div>
 </div>

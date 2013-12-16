@@ -34,7 +34,7 @@ class Orders {
 					
         }
         
-                static public function FinalSaleDetails($row, $orderNumber) 
+                static public function FinalSaleDe($row, $orderNumber) 
         {
                 $conn = GetConnection();
                         $sql = " Insert Into 2013Fall_Order (`OrderTotal`, `OrderNumber`) " . 

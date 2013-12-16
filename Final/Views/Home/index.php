@@ -16,7 +16,7 @@ switch ($action) {
 		endforeach;
 
 		foreach ($cart as $value) :
-			Orders::FinalSaleDetails($value, $random);
+			Orders::FinalSaleDe($value, $random);
 		endforeach;
 		unset($_SESSION['cart']);
 		$_SESSION['cart'] = array();
@@ -32,7 +32,8 @@ switch ($action) {
 		header('Location: ?action=cart');
 		break;
 	case 'emptyCart' :
-		unset($_SESSION['cart']);		$_SESSION['cart'] = array();
+		unset($_SESSION['cart']);
+		$_SESSION['cart'] = array();
 		$view = "cart.php";
 		break;
 	case 'products' :
@@ -65,7 +66,7 @@ switch ($action) {
 
 	default :
 		$view = 'home.php';
-		$title = 'Store';
+		$title = 'Front';
 		break;
 }
 

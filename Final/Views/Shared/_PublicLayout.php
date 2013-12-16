@@ -74,7 +74,7 @@
                                             </form>
                                         <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle compact" data-toggle="dropdown">
-                                                        <small>Moshe Plotkin<br /></small>
+                                                        <small>Brian Travis<br /></small>
                                                         Your Account <b class="caret"></b>
                                                 </a>
                                         <ul class="dropdown-menu">
