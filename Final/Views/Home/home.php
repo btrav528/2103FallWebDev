@@ -10,15 +10,20 @@
 		</div>
 		
 		<div data-bind="foreach: products" >
-			<div class="col-sm-3">
-				<div class="well">
-					<h5 data-bind="text: ItemName" >Test</h5>
-					<h5 data-bind="text: Price"> </h5>
-					<h5 data-bind="text: Description"></h5>
-					<a data-bind="attr: { href: '?action=addToCart&id=' + id} " >Add To Cart</a>
-				</div>
-			</div>
-		</div>
+                <div class="col-sm-3">
+                        <div class="well clearfix">
+                                
+                                <h4 data-bind="text:ItemName"></h4> <h4 data-bind="text: Model"></h4>
+                                <p data-bind="text: Description">This is a test</p>
+                                <button type="button" class="btn btn-info btn disabled pull-left" data-bind="text: Price">Price</button>
+                
+                        <a class="btn btn-success pull-right" data-bind="attr: { href: '?action=addToCart&id=' + Id} ">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Add To Cart
+                </a>                                                          
+                        </div>
+                </div>
+        </div>
 
 		
 		
@@ -28,8 +33,8 @@
 
 	<script type="text/html" id="shopping-cart-template">
 		<span class="glyphicon glyphicon-shopping-cart"></span>
-		<a href="#">Cart</a>
-		<span class="badge"> 1 </span>
+		 <a href="?action=cart" class="navbar-link">Cart</a>
+		<span class="badge"> <? $cart = $_SESSION['cart']; echo count($cart); ?> </span>
 	</script>
 	
 	
@@ -49,9 +54,11 @@
  		var vm = {
  			categories: ko.observableArray(),
  			products: ko.observableArray(),
- 			
+
  			categoryClicked: function() {
+ 				
 		 		$.getJSON("?action=products&format=json", { CategoryId: this.Id } ,function(results){
+		 			
 		 			vm.products(results.model);
 		 		})
  				

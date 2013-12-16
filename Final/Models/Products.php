@@ -5,23 +5,14 @@
  */
 class Products {
         
-        static public function Get($id=null)
-        {
-                if(isset($id)){
-                        $sql = "        SELECT U.*, K.Name as UserType_Name
-                                                FROM 2013Fall_Users U
-                                                        Join 2013Fall_Keywords K ON U.`UserType`=K.id
-                                                WHERE U.id=$id
-                                        ";
-                        return fetch_one($sql);                        
-                }else{
-                        $sql = "        SELECT U.*, K.Name as UserType_Name
-                                                FROM 2013Fall_Users U
-                                                        Join 2013Fall_Keywords K ON U.`UserType`=K.id
-                                        ";
-                        return fetch_all($sql);                        
-                }
-        }
+       static public function Get($id = null) {
+		if (isset($id)) {
+			return Fetch_One("SELECT * FROM 2013Fall_Item WHERE Id=$id");
+		} else {
+			return fetch_all('SELECT * FROM 2013Fall_Item');
+		}
+	}
+	
 
         static public function GetCategories()
         {
