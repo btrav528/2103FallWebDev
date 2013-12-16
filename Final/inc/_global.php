@@ -37,6 +37,6 @@ function FetchAll($sql)
 	}
 function Fetch_One($sql)
 {
-        $arr = fetch_All($sql);
+        $arr = FetchAll($sql);
         return $arr[0];
 }
