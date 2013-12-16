@@ -17,7 +17,7 @@
                 
 
                 <div class="form-group <?= isset($errors['LastName']) ? 'has-error' : '' ?>">
-                        <label for="LastName" class="col-sm-2 control-label">User Name</label>
+                        <label for="LastName" class="col-sm-2 control-label">Last Name</label>
                         <div class="col-sm-10">
                                 <input type="text" name="LastName" id="LastName" placeholder="Last Name" class="form-control" value="<?=$model['LastName']?>" />
                                 <? if(isset($errors['LastName'])): ?><span class ="error"><?=$errors['LastName'] ?></span><? endif;?>                

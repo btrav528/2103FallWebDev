@@ -9,7 +9,7 @@ class Products {
 		if (isset($id)) {
 			return Fetch_One("SELECT * FROM 2013Fall_Item WHERE Id=$id");
 		} else {
-			return fetch_all('SELECT * FROM 2013Fall_Item');
+			return FetchAll('SELECT * FROM 2013Fall_Item');
 		}
 	}
 	
@@ -17,7 +17,7 @@ class Products {
         static public function GetCategories()
         {
                         $sql = "        SELECT * FROM 2013Fall_Category";
-                        return fetch_all($sql);                        
+                        return FetchAll($sql);                        
         }
         
         static public function GetByCategory($id=null)
@@ -25,6 +25,6 @@ class Products {
                         $sql = "        SELECT *
                                                 FROM 2013Fall_Item WHERE Category_Id=$id
                                         ";
-                        return fetch_all($sql);                        
+                        return FetchAll($sql);                        
         }
 }

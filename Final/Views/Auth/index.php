@@ -29,7 +29,7 @@ switch ($action)
 switch ($format)
 {
         case 'dialog':
-                include '../Shared/_dialogLayout.php';
+                include '../Shared/_DialogLayout.php';
                 break;
         
         case 'plain':
@@ -41,7 +41,7 @@ switch ($format)
                                 break;
         
         default:
-                include '../Shared/_layout.php';
+                include '../Shared/_Layout.php';
                 break;
 }
 ?>

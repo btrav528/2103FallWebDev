@@ -23,14 +23,14 @@ switch ($action) {
 	case 'products' :
 		$model = Products::GetByCategory($_REQUEST['CategoryId']);
 		break;
-case 'purchase':
-                $view = "purchase.php";
-                break;
-				 case 'login':
-                        $model = array('LastName' => null, 'Password' => null);        
-                 
-                $view = "login.php";
-                break;
+	case 'purchase' :
+		$view = "purchase.php";
+		break;
+	case 'login' :
+		$model = array('LastName' => null, 'Password' => null);
+
+		$view = "login.php";
+		break;
 	case 'cart' :
 		foreach ($_SESSION['cart'] as $value) :
 			$cart[] = Products::Get($value['id']);

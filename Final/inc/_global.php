@@ -13,6 +13,7 @@ include_once __DIR__ . '../../Models/OrderContents.php';
 include_once __DIR__ . '../../Models/Shipping.php';
 include_once __DIR__ . '../../Models/ViewHistory.php';
 include_once __DIR__ . '../../Models/Products.php';
+include_once __DIR__ . '../../Models/Auth.php';
 session_start();
 function GetConnection() {
 	global $sql_password;
@@ -20,7 +21,7 @@ function GetConnection() {
 	return $conn;
 
 }
-function fetch_all($sql)
+function FetchAll($sql)
 {
         $ret = array();
         $conn = GetConnection();

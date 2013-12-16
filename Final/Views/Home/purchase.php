@@ -22,7 +22,7 @@
                 
 
                 
-                                <input type="hidden" name="Users_id" value="<?=$user['id'] ?>" />        
+                                <input type="hidden" name="Users_id" value="<?=$user['Id'] ?>" />        
                                 
                                 <div class="form-group ">
                         <label for="UserName" class="col-sm-2 control-label">User</label>
@@ -35,8 +35,8 @@
                         <label for="Address_id" class="col-sm-2 control-label">Address</label>
                         <div class="col-sm-10">
                                 <select name="Address_id" id="Address_id" class="form-control ">                                
-                                        <? foreach (Addresses::GetSelectList($user['id']) as $addressRs): ?>
-                         <option value="<?=$addressRs['A_id'] ?>"><?=$addressRs['Street1'] ?></option>
+                                        <? foreach (Shipping::Get() as $addressRs): ?>
+                         <option value="<?=$addressRs['Id'] ?>"><?=$addressRs['FirstLine'] ?></option>
                                         <? endforeach; ?>
                                 </select>
                         </div>
@@ -46,8 +46,8 @@
                         <label for="Payments_id" class="col-sm-2 control-label">Payments</label>
                         <div class="col-sm-10">
                                 <select name="Payments_id" id="Payments_id" class="form-control ">                                
-                                        <? foreach (Payments::GetSelectList($user['id']) as $paymentsRs): ?>               
-                         <option value="<?=$paymentsRs['P_id'] ?>">XXXX-XXXX-XXXX-<?=substr($paymentsRs['Number'], -4);?> EXP: <?=substr($paymentsRs['Expiration'], 0, -3);?></option>
+                                        <? foreach (Card::Get($user['Id']) as $paymentsRs): ?>               
+                         <option value="<?=$paymentsRs['P_id'] ?>">XXXX-XXXX-XXXX-<?=substr($paymentsRs['CardNumber'], -4);?> EXP: <?=substr($paymentsRs['ExpDate'], 0, -3);?></option>
                                         <? endforeach; ?>
                                 </select>
                         </div>
@@ -60,7 +60,7 @@
                 </div>                
         </form>
         <div class="col-sm-offset-2 col-md-4">
-                <a href="?action=newAddress" class="btn btn-success " role="button" align="center">Add Address</a>
+                <a href="../Shipping/index.php?action=new" class="btn btn-success " role="button" align="center">Add Address</a>
                 <a href="?action=newPayment" class="btn btn-success" role="button">Add Payment</a>
         </div>
 </div>

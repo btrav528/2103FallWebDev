@@ -34,6 +34,27 @@
                 
                         <div class="collapse navbar-collapse nav-c">
                     <ul class="nav navbar-nav">
+                    	  <?if (Auth::GetUser() != null)
+             {?>
+                                <li class="dropdown">        
+                             <a href="#" class="dropdown-toggle compact" data-toggle="dropdown"><small><? $user=Auth::GetUser(); echo $user['FirstName'];?> <?echo $user['LastName']; ?><br /></small>Your Account <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">        
+                                                <li><a href="?action=manage">Manage Account</a></li>
+                                                <li><a href="?action=logout">Logout</a></li>
+                                        </ul>
+                     </li>
+             <?}
+                         
+                        else 
+                        {?>
+                        <li>
+                      <a href="?action=login">Login</a>
+                        </li>
+                  <li>
+                          <a href="?action=newUser">Signup</a>
+                        </li>                          
+                        <? } ?>
+   
                                         <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle compact" data-toggle="dropdown">
                                                         <small>Shop by<br /></small>

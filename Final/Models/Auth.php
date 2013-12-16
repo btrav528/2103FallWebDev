@@ -24,7 +24,7 @@
                         $sql = "        SELECT *FROM 2013Fall_Users 
                                                      WHERE U.LastName='$userName'
                                         ";
-                        $user = fetch_one($sql);
+                        $user = Fetch_One($sql);
                         if($user == null)
                         {        
                                 $_SESSION['loginUserError'] = "That User Doesn't Exist";

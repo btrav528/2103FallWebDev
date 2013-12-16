@@ -12,7 +12,7 @@ class Items {
                                                         JOIN 2013Fall_Manufactures M on P.Manufacture_id = M.Id
                                                 ORDER BY P.id
                                         ";
-                        return fetch_all($sql);                
+                        return FetchAll($sql);                
         }
 	
 	static public function GetItemsInCategory($CategoryId)
@@ -20,14 +20,14 @@ class Items {
                 $sql = " SELECT * FROM 2013Fall_Item P
                                  Where P.Category_Id = $CategoryId
                 ";
-                return fetch_all($sql);
+                return FetchAll($sql);
         }
 		static public function GetByCategory($id=null)
         {
                         $sql = "        SELECT *
                                                 FROM 2013Fall_Products WHERE Product_Category_id=$id
                                         ";
-                        return fetch_all($sql);                        
+                        return FetchAll($sql);                        
         }
 		 static public function FrontType($id=null)
         {
@@ -38,7 +38,7 @@ class Items {
                                                 WHERE K.id='$id'
                                                 ORDER BY P.id
                                         ";
-                        return fetch_all($sql);                
+                        return FetchAll($sql);                
         }        
 
 	static public function Get($id = null) {
@@ -52,7 +52,7 @@ class Items {
 	static public function GetCategories()
         {
                 $sql = " SELECT * sFROM 2013Fall_Category ";
-                return fetch_all($sql);
+                return FetchAll($sql);
         }
 
 	static public function Save($row)
