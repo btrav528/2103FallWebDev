@@ -54,8 +54,8 @@
                 </div>        
                                                 
                 <div class="form-group">
-                        <div class="col-sm-offset-2 col-lg-10">
-                                <input type="submit" class="form-control btn btn-primary" value="Finalize Order"/>
+                        <div class="col-sm-offset-2 col-md-10">
+                                <input type="submit" class="form-control btn btn-primary" value="Submit"/>
                         </div>
                 </div>                
         </form>
