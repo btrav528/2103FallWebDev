@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>All Things Gaming - <?=@$title?></title>
+    <title>All Things Gaming - <?=@$title ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <style type="text/css">
-                body { padding-top: 75px; }
+			body {
+				padding-top: 75px;
+			}
         </style>
   </head>
   <body>
@@ -48,18 +50,25 @@
                 <li><a href="../Comments/">Comments</a></li>
               </ul>
           </ul>
-          <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><? $user=Auth::GetUser(); echo $user['FirstName'];?> <?echo $user['LastName']; ?> - <? echo $user['Name'];?> </a></p>
+          <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><? $user = Auth::GetUser();
+			echo $user['FirstName'];
+		?> <?echo $user['LastName']; ?> - <? echo $user['Name']; ?> </a></p>
         </div>
       </div>
     </div>
     
-    <? include $view; ?>
+    <?
+		include $view;
+ ?>
      
     
 
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="Scripts/main.js"></script>
-    <? if(function_exists('Scripts')) Scripts(); ?>
+    <?
+		if (function_exists('Scripts'))
+			Scripts();
+ ?>
   </body>
 </html>

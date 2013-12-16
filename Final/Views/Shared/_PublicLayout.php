@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Website - <?=@$title?></title>
+    <title>My Website - <?=@$title ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
     <style type="text/css" media="screen">
-        .navbar-nav>li>a.compact {
-                padding-top: 5px;
-                padding-bottom: 5px;
-        }
-        .navbar-form{
-                max-width: 500px;
-        }
+		.navbar-nav > li > a.compact {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.navbar-form {
+			max-width: 500px;
+		}
     </style>
   </head>
   <body>
@@ -37,16 +37,19 @@
                     	  <?if (Auth::GetUser() != null)
              {?>
                                 <li class="dropdown">        
-                             <a href="#" class="dropdown-toggle compact" data-toggle="dropdown"><small><? $user=Auth::GetUser(); echo $user['FirstName'];?> <?echo $user['LastName']; ?><br /></small>Your Account <b class="caret"></b></a>
+                             <a href="#" class="dropdown-toggle compact" data-toggle="dropdown"><small><? $user = Auth::GetUser();
+									echo $user['FirstName'];
+								?> <?echo $user['LastName']; ?><br /></small>Your Account <b class="caret"></b></a>
                                         <ul class="dropdown-menu">        
                                                 <li><a href="?action=manage">Manage Account</a></li>
                                                 <li><a href="?action=logout">Logout</a></li>
                                         </ul>
                      </li>
              <?}
-                         
-                        else 
-                        {?>
+
+						else
+						{
+					?>
                         <li>
                       <a href="?action=login">Login</a>
                         </li>
@@ -88,13 +91,18 @@
                 </div>
         </div>
 
-        <? include $view; ?>
+        <?
+	include $view;
+ ?>
 
 
 
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <? if(function_exists('Scripts')) Scripts(); ?>
+    <?
+		if (function_exists('Scripts'))
+			Scripts();
+ ?>
  </body>
 </html>

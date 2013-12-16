@@ -1,11 +1,11 @@
-<?$_SESSION['url'] = $_SERVER['REQUEST_URI'];?>
+<?$_SESSION['url'] = $_SERVER['REQUEST_URI']; ?>
 <style type="text/css">
-        .error {
-                color: red;
-        }
+	.error {
+		color: red;
+	}
 </style>
 <div class="container">
-        <h3>Please select your method of payment and shipping address. Your total for today is: $<?=$_REQUEST['total']?></h3>
+        <h3>Please select your method of payment and shipping address. Your total for today is: $<?=$_REQUEST['total'] ?></h3>
         <br>
         
         <? if (isset($errors) && $errors): ?>
@@ -47,7 +47,7 @@
                         <div class="col-sm-10">
                                 <select name="Payments_id" id="Payments_id" class="form-control ">                                
                                         <? foreach (Card::Get($user['Id']) as $paymentsRs): ?>               
-                         <option value="<?=$paymentsRs['Id'] ?>">XXXX-XXXX-XXXX-<?=substr($paymentsRs['CardNumber'], -4);?> EXP: <?=substr($paymentsRs['ExpDate'], 0, -3);?></option>
+                         <option value="<?=$paymentsRs['Id'] ?>">XXXX-XXXX-XXXX-<?=substr($paymentsRs['CardNumber'], -4); ?> EXP: <?=substr($paymentsRs['ExpDate'], 0, -3); ?></option>
                                         <? endforeach; ?>
                                 </select>
                         </div>
