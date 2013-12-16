@@ -47,7 +47,7 @@
                         <div class="col-sm-10">
                                 <select name="Payments_id" id="Payments_id" class="form-control ">                                
                                         <? foreach (Card::Get($user['Id']) as $paymentsRs): ?>               
-                         <option value="<?=$paymentsRs['P_id'] ?>">XXXX-XXXX-XXXX-<?=substr($paymentsRs['CardNumber'], -4);?> EXP: <?=substr($paymentsRs['ExpDate'], 0, -3);?></option>
+                         <option value="<?=$paymentsRs['Id'] ?>">XXXX-XXXX-XXXX-<?=substr($paymentsRs['CardNumber'], -4);?> EXP: <?=substr($paymentsRs['ExpDate'], 0, -3);?></option>
                                         <? endforeach; ?>
                                 </select>
                         </div>

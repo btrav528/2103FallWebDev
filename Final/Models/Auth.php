@@ -21,7 +21,7 @@
 
                 public static function LogIn($userName, $password)
                 {
-                        $sql = "        SELECT *FROM 2013Fall_Users 
+                        $sql = "        SELECT * FROM 2013Fall_Users 
                                                      WHERE U.LastName='$userName'
                                         ";
                         $user = Fetch_One($sql);

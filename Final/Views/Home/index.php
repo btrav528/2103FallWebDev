@@ -6,6 +6,22 @@ include_once '../../inc/_global.php';
 $errors = null;
 
 switch ($action) {
+	case 'finalPurchase' :
+		$random = @date('U');
+
+		Orders::FinalSale($_REQUEST, $random);
+
+		foreach ($_SESSION['cart'] as $value) :
+			$cart[] = Products::Get($value['id']);
+		endforeach;
+
+		foreach ($cart as $value) :
+			Orders::FinalSaleDetails($value, $random);
+		endforeach;
+		unset($_SESSION['cart']);
+		$_SESSION['cart'] = array();
+		$view = "receipt.php";
+		break;
 
 	case 'categories' :
 		$model = Products::GetCategories();
@@ -16,8 +32,7 @@ switch ($action) {
 		header('Location: ?action=cart');
 		break;
 	case 'emptyCart' :
-		unset($_SESSION['cart']);
-		$_SESSION['cart'] = array();
+		unset($_SESSION['cart']);		$_SESSION['cart'] = array();
 		$view = "cart.php";
 		break;
 	case 'products' :

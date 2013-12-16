@@ -4,6 +4,43 @@
  *
  */
 class Orders {
+	static public function FinalSale($row, $orderNumber) 
+        {
+                @$orderDate = date('Y-m-d');
+                @$shipDate = date('Y-m-d', strtotime("+3 days"));
+                $conn = GetConnection();
+                        $sql = " Insert Into 2013Fall_Orders (`2013Fall_User_id`, , `OrderNumber`, `DateOrdered`, `DateShipped`)" . 
+                                        " Values ('$row[Users_id]','$orderNumber', '$orderDate', '$shipDate') ";
+                                                                        
+                                                
+                $conn->query($sql);
+                $error = $conn->error;                                        
+                $conn -> close();
+
+                if ($error) {
+                        return array('db_error' => $error);
+                } else {
+                        return false;
+                }
+        }
+        
+                static public function FinalSaleDetails($row, $orderNumber) 
+        {
+                $conn = GetConnection();
+                        $sql = " Insert Into 2013Fall_OrderDetails (`OrderTotal`, `OrderNumber`) " . 
+                                        " Values ('$row[Price]', '$orderNumber')";
+                                        
+                $conn->query($sql);
+                $error = $conn->error;                                        
+                $conn -> close();
+
+                if ($error) {
+                        return array('db_error' => $error);
+                } else {
+                        return false;
+                }
+        }
+	
 
 	static public function Get($id = null) {
 		if (isset($id)) {
