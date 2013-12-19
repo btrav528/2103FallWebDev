@@ -5,7 +5,8 @@
 	}
 </style>
 <div class="container">
-        <h3>Please select your method of payment and shipping address. Your total for today is: $<?=$_REQUEST['total'] ?></h3>
+        <h3>Please select your method of payment and shipping address. </h3>
+        <h5>Your total is $<?=$_REQUEST['total'] ?></h5>
         <br>
         
         <? if (isset($errors) && $errors): ?>
